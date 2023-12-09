@@ -6,9 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="bar,Midnight,jmelt,aunnux,MidnightBar,vrc,vrchat">
   <meta name="description" content="A site for The Midnight Bar (VRC) related things">
+  <style type="text/css">
+
+  </style>
 </head>
 <style>
+  * {
+    cursor: url(files/images/index/cursor.png), url(files/images/index/cursor.png), auto !important;
+  }
+
   body {
+    cursor: url(files/images/index/cursor.png), url(files/images/index/cursor.png), auto !important;
     background-size: cover;
     background-attachment: fixed;
     background-image: url(files/images/index/Background.png);
@@ -42,6 +50,7 @@
     position: fixed;
     top: 40%;
     left: 65vw;
+    animation: all 0.2s ease-in-out 0.3s infinite forwards;
     transform: translate(-50%, -50%);
   }
 
@@ -50,23 +59,57 @@
     bottom: 8px;
     left: 10vw;
   }
+
+  body div.grow {
+    transition: all 0.2s ease-in-out;
+  }
+
+  body div.grow:hover {
+    transform: scale(1.5);
+  }
+
+  #overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: block;
+    /* Hidden by default */
+    opacity: 0.3;
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    background-image: url(https://media.tenor.com/M8m-uL_Xg1cAAAAj/sparkle-star.gif);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 0;
+    /* Specify a stack order in case you're using a different order for other elements */
+  }
 </style>
 </head>
+<div id="overlay"></div>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
 <body>
   <div class="container">
-    <div class="bottom-left"><a href="list.html" target="_blank" title="Bartender Drink List"><img width="40%" ;
+    <div class="bottom-left grow"><a href="list.html" target="_blank" title="Bartender Drink List"><img width="40%" ;
           src="files/images/index/Flanergide.png"></img></a></div>
-    <div class="top-left"><a href="https://youtu.be/yq-OMyN4O0g" target="_blank" title="Youtube Video"><img
+    <div class="top-left grow"><a href="https://youtu.be/yq-OMyN4O0g" target="_blank" title="Youtube Video"><img
           alt="Adelhyde" width="40%" src="files/images/index/Adelhyde.png"></img></a></div>
-    <div class="top-right"><a href="https://www.patreon.com/jmelt" target="_blank" title="[Jmelt] Patreon"><img
+    <div class="top-right grow"><a href="https://www.patreon.com/jmelt" target="_blank" title="[Jmelt] Patreon"><img
           width="40%" src="files/images/index/Bronson.png"></img></a></div>
-    <div class="bottom-right"><a href="https://discord.gg/YuntSck9Rs" target="_blank" title="Discord Server"><img
+    <div class="bottom-right grow"><a href="https://discord.gg/YuntSck9Rs" target="_blank" title="Discord Server"><img
           width="40%" src="files/images/index/Delta.png"></img></a></div>
     <div class="centeredvrc"><a href="https://vrchat.com/home/world/wrld_ad903340-41c5-44a1-bf37-9bfad5c91a76"
         target="_blank" title="VRChat"><img style="width:40%"
-          src="https://assets.vrchat.com/www/brand/logo-appedashi.png"></img></a></div>
+          src="files/images/index/vrcLoading.gif"></img></a></div>
     <!-- <div class="centered"><a href="https://youtu.be/yq-OMyN4O0g" target="_blank" title="VRChat"><img style="width:40%"src="files/images/index/Karmotrine.png"></a></img></div> -->
   </div>
 </body>
+
 </html>
